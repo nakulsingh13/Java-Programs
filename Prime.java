@@ -7,11 +7,13 @@ public class Prime {
 	public static void main(String[] args) {
 		// Prime number
 		
-		int n,m=0,flag=0;
+		int n,m,flag=0;
 		
-		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
 		
-		n = sc.nextInt();
+		try (Scanner sc = new Scanner(System.in)) {
+			n = sc.nextInt();
+		}
 		
 		m=n/2;
 		
@@ -25,10 +27,10 @@ public class Prime {
 		}
 		
 		if(flag==0) {
-			System.out.println("PRIME NUMBER");
+			System.out.println("THIS NUMBER IS PRIME NUMBER");
 		}
 		else {
-			System.out.println("NOT PRIME");
+			System.out.println("THIS NUMBER IS NOT PRIME NUMBER");
 		}
 
 	}
