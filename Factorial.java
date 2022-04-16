@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class Factorial {
 	
 	public static int factorial(int n) {
+		
+		
 		int fact=1;
-		for(int i=1;i<=n;i++) {
+		for(int i=n;i>=1;i--){
 			fact = fact*i;
 		}
 		
@@ -17,11 +19,15 @@ public class Factorial {
 		
 		try (Scanner sc = new Scanner(System.in)) {
 			int n = sc.nextInt();
-			
-			
+			if(n<0) {
+				System.out.println("Invalid NUmber");
+				
+			}
+			else {
 			int fact = factorial(n);
-			
 			System.out.println("Factorial = "+fact);
+			}
+			
 		}
 		
 
